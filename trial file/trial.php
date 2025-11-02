@@ -1,13 +1,14 @@
 <?php
-$fruits = ["Apple", "Banana", "Mango"];
+$name = 34;
+echo $name;
+var_dump($name);
 
-foreach($fruits as $fruit){
-  echo $fruit . "<br>";
-}
+?>
+<?php
+$name = "sakiul kawsar";
+echo strtoupper($name);
+$father = "ABDUR RAHOMAN";
+echo strtolower($father);
+echo str_replace("kawsar", "rahoman", $name);
 
-function add($a, $b){
-  return $a + $b;
-}
-
-echo add(10, 5);
 ?>
