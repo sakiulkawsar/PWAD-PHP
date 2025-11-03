@@ -1,14 +1,17 @@
 <?php
-$name = 34;
-echo $name;
-var_dump($name);
-
+function myFunction($fname){
+echo "$fname Kawsar.<br>";
+}
+myFunction("Sakiul");
+myFunction("Sumon");
+myFunction("Rahoman");
+myFunction("Kadir");
 ?>
+<hr>
 <?php
-$name = "sakiul kawsar";
-echo strtoupper($name);
-$father = "ABDUR RAHOMAN";
-echo strtolower($father);
-echo str_replace("kawsar", "rahoman", $name);
 
+function myName($name, $age){
+    echo "$name Kawsar. and born in $age <br>";
+}
+myName("Sakiul", "100252");
 ?>
