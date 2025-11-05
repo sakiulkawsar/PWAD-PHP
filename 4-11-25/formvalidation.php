@@ -24,9 +24,7 @@
                 <option value="Java">Java</option>
                 <option value="C++">C++</option>
             </select>
-            <br>
-            <label for="wantToLearn">Want to learn:</label>
-
+        
             <br>
             <label for="wantToLearn">Want to learn:</label>
             <input type="checkbox" name="wantToLearn[]" id="wantToLearn" value="PHP">PHP
