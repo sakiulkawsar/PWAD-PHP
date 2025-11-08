@@ -16,7 +16,7 @@ class student
     {
         $data = file($this->file);
         foreach ($data as $line) {
-            $a = list($id, $name, $batch, $result) = explode(" ", $line);
+            list($id, $name, $batch, $result) = explode(" ", $line);
             if ($fid == $id) {
                 return $id . ", " . $name . ", " . $batch . ", " . $result;
             }
