@@ -6,34 +6,34 @@
     <title>Document</title>
 </head>
 <body>
+    <h2>Prime checker</h2>
+    <form action="" method="post">
+        <input type="number" name="myNumber"> <br>
+        <input type="submit" name="submit" value="Check">
+    </form>
+
     <?php
-   
-    if (isset($_REQUEST["submit"])) {
-        $mynumber = $_REQUEST["mynumber"];
-        if($mynumber==1){
-            echo "$mumber is neither prime nor composite.";
-        } elseif ($mynumber == 2) {
-            echo "$mynumber is a prime number.";
-        } else {
-            $isPrime = true;
-            for ($i = 2; $i <= ($mynumber); $i++) {
-                if ($mynumber % $i == 0) {
-                    $isPrime = false;
-                    break;
-                }
-            }
-            if ($isPrime) {
-                echo "$mynumber is a prime number.";
-            } else {
-                echo "$mynumber is not a prime number.";
+ if(isset($_REQUEST["submit"])){
+    $myNumber = $_REQUEST["myNumber"];
+    // echo "My number is ".$myNumber."";
+    if($myNumber == 1){
+        echo "$myNumber is not a prime number";
+    } elseif($myNumber == 2){
+        echo "$myNumber is a prime number";
+    } else {
+        $isPrime = true;
+        for($i = 2; $i < $myNumber; $i++){
+            if($myNumber % $i == 0){
+                $isPrime = false;
+                break;
             }
         }
+    } if ($isPrime){
+        echo "$myNumber is prime number";
+    }else{
+        echo "$myNumber is not a prime number";
     }
+ }
     ?>
-        
-    <form action="">
-        <input type="number" name="mynumber" placeholder="Enter your number"> <br>
-        <input type="submit" name="submit" value="CHECK">
-    </form>
 </body>
 </html>
