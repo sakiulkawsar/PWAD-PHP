@@ -46,7 +46,7 @@
         $mynumber = $_REQUEST["mynumber"];
        $factorial = 1;
         for ($i = 1; $i <= $mynumber; $i++) {
-            $i <= $mynumber;
+           
             $factorial *= $i;
         }
         echo "Factorial of $mynumber is: $factorial";

@@ -1,16 +1,12 @@
-<?php 
-$mcq = 5;
+function add(){
 
-switch ( $mcq) {
-    case 2:
-        print "html";
-        break;
+         STATIC $n=15; 
+         $n = $n + 5; 
+         echo $n;
 
-    case 1:
-        print "css";
-        break;
+  }
 
-    default:
-        print "javascript";
-}
-?>
+add();
+
+
+add();
