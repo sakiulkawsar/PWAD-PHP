@@ -11,12 +11,12 @@
     if (isset($_REQUEST["submit"])) {
         $mynumber = $_REQUEST["mynumber"];
         if($mynumber==1){
-            echo "$mumber is neither prime nor composite.";
+            echo "$mynumber is neither prime nor composite.";
         } elseif ($mynumber == 2) {
             echo "$mynumber is a prime number.";
         } else {
             $isPrime = true;
-            for ($i = 2; $i <= ($mynumber); $i++) {
+           for ($i = 2; $i <= sqrt($mynumber); $i++) {
                 if ($mynumber % $i == 0) {
                     $isPrime = false;
                     break;
