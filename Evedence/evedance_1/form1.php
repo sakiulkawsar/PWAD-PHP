@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,23 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-   
-        <h3>Find result</h3>
-        <form action="" method="post">
-            <input type="number" name="student_id"> <br>
-            <input type="submit" name="submit" value="Check">
-       
+    <h2>Form validation</h2>
+    <form action="" method="post">
+        <input type="text" name="name"><br>
+        <input type="submit" name="submit" value="Check">
     </form>
-
-    <?php  
+    <?php 
     if(isset($_POST["submit"])){
-        $studen_id = $_POST["student_id"];
+        $name = $_POST["name"];
 
-         include("result_Class.php");
-
-        $sheet = new student("result_sheet.txt");
+        include("result_class.php");
+        $sheet = new student("result.txt");
         $result = $sheet->result($stid);
         echo $result;
+
     }
     ?>
 </body>
