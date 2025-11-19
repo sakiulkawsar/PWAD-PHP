@@ -36,6 +36,6 @@
     <br>
 
     
-    <a href="student.php">View Employees</a>
+    <a href="index.php">View Studnet</a>
 </body>
 </html>

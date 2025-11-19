@@ -27,6 +27,7 @@ $result = $db->query($sql);
     <th>First Name</th>
     <th>Last Name</th>
     <th>Birthdate</th>
+    <th colspan="2">Action</th>
   </tr>
 
   <?php while ($row1 = $result->fetch_object()) { ?>
@@ -36,11 +37,13 @@ $result = $db->query($sql);
     <td><?php echo ($row1->first_name); ?></td>
     <td><?php echo ($row1->last_name); ?></td>
     <td><?php echo ($row1->birthdate); ?></td>
+    <td> <a href="student_edit.php?id=<?php echo ($row1->employeeID); ?>"> Edit</a></td>
+    <td> <a href="student_delete.php?id=<?php echo ($row1->employeeID); ?>">Delete</a> </td>
   </tr>
   <?php } ?>
 
 </table>
-<a href="new_entry.php">Add New Employee</a>
+<a href="new_entry.php">Add New Student</a>
 
 </body>
 </html>
