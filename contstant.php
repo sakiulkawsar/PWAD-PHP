@@ -9,6 +9,6 @@ echo hello;
  const Name = "bahauddin";
  const age = 20;
  echo "Name:".Name. "age". age;
- Hello = "something";
+ $Hello = "something";
  
  ?>
