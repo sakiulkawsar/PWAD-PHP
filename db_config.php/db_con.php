@@ -11,6 +11,7 @@ $db = new mysqli($host, $user, $password, $db);
 // }
 // echo "Connected successfully";
 // $db->close();
+$project_url = "http://localhost/PWAD-PHP/php_projects";
 ?>
 
 
