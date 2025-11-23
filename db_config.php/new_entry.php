@@ -13,6 +13,7 @@
         <input type="date" name="bdate" placeholder="Enter your birthdate"> <br>
         <input type="submit" name="submit" value="Submit">
     </form>
+    
 
     <?php 
     if(isset($_POST['submit'])){
