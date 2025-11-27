@@ -33,9 +33,10 @@ $db = new mysqli($host, $user, $password, $db);
 
     <?php
     if (isset($_POST['submit'])) {
-        $name = $_POST['name'];
-        $address = $_POST['address'];
-        $contract = $_POST['contract'];
+        // $name = $_POST['name'];
+        // $address = $_POST['address'];
+        // $contract = $_POST['contract'];
+        extract($_POST);
 
         $sql = "CALL manufacture_insert	('$name', '$address', '$contract')";
         $db->query($sql);
@@ -53,6 +54,8 @@ $db = new mysqli($host, $user, $password, $db);
 
         // $db->close();
     }
+       $sql2 = "SELECT * FROM manufacturer";
+    $result = $db->query($sql2);
     ?>
 
     <h1>List of current manufacturer</h1>
@@ -76,7 +79,10 @@ $db = new mysqli($host, $user, $password, $db);
                 <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['name']; ?></td>
             <td><?php echo $row['address']; ?></td>
-                <td></td>
+               <td><?php echo $row['contact_no'] ?> </td>
+                    <td>
+                    <a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a>
+                </td>
             </tr>
         <?php } ?>
     </table>
