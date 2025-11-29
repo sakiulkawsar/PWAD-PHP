@@ -79,7 +79,7 @@ $db = new mysqli($host, $user, $password, $db);
                 <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['name']; ?></td>
             <td><?php echo $row['address']; ?></td>
-               <td><?php echo $row['contact_no'] ?> </td>
+               <td><?php echo $row['contract_no'] ?> </td>
                     <td>
                     <a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a>
                 </td>
